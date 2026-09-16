@@ -1,0 +1,26 @@
+{
+  "source": "https://index.minfin.com.ua/ua/economy/index/inflation/",
+  "period": [
+    "2010-01-01",
+    "2025-12-01"
+  ],
+  "seed": 42,
+  "degree": 0,
+  "seasonal": true,
+  "time_unit": "роки від початку вибірки; t = номер місяця / 12",
+  "basis": "1, t, ..., t^degree; за сезонності: sin(2*pi*t), cos(2*pi*t)",
+  "coefficients": [
+    100.90833333333335,
+    0.3108299677213562,
+    0.436225914090224
+  ],
+  "phi": 0.6042524504422857,
+  "phi_unrestricted": 0.6042524504422857,
+  "model": "y*(t) = X(t)b + e(t); e(t) = phi*e(t-1) + u*(t)",
+  "innovation_distribution": "bootstrap із центрованих емпіричних інновацій",
+  "innovation_mean": -4.650148794241494e-18,
+  "innovation_variance": 1.501925430313217,
+  "stationary_residual_variance": 2.3656877716408244,
+  "trend_r_squared": 0.05747426081169915,
+  "simulations": 500
+}
