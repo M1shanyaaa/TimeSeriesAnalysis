@@ -1,0 +1,37 @@
+{
+  "input_file": "results\\parsed_data.csv",
+  "seed": 42,
+  "n_observations": 192,
+  "development_n": 128,
+  "holdout_n": 64,
+  "detector_calibration_n": 64,
+  "forecast_horizon": 96,
+  "selection_metric": "RMSE на часовій крос-валідації",
+  "selected_pipeline": {
+    "method": "hampel",
+    "degree": 0,
+    "seasonal": true
+  },
+  "adaptive_parameters": {
+    "window": 7,
+    "q": 4.5
+  },
+  "polynomial_model": {
+    "degree": 0,
+    "seasonal": true,
+    "center": 95.5,
+    "scale": 95.5,
+    "coefficients": [
+      100.73385416666667,
+      0.0044220734670650476,
+      0.29944007043393567
+    ]
+  },
+  "time_definition": "t = номер місяця від початку ряду",
+  "polynomial_basis": "z=(t-center)/scale; 1,z,...,z^degree",
+  "seasonal_basis": "sin(2*pi*t/12), cos(2*pi*t/12)",
+  "flagged_by_selected_method": 16,
+  "holdout_used_for_selection": false,
+  "forecast_intervals": "Не розраховувалися",
+  "self_tests_passed": true
+}
